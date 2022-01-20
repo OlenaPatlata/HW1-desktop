@@ -293,6 +293,7 @@
 // console.log(fruits.includes(fruit));
 //   return; // Change this line
 // }
+
 // function checkFruit(fruit) {
 //   const fruits = ["apple", "plum", "pear", "orange"];
 //   let a = fruits.includes(fruit) ? true : false;
@@ -300,6 +301,13 @@
 //   return a; // Change this line
 // }
 // checkFruit("plum");
+
+
+// function checkFruit(fruit) {
+//   const fruits = ["apple", "plum", "pear", "orange"];
+//   return fruits.includes(fruit); // Change this line
+// }
+// checkFruit("plumn");
 
 
 // --------------------------------------ДЗ 25/32 модуль 2
@@ -329,15 +337,15 @@
 // findNumber(16, 35, 7);
 
 
-function findOdd(A) {
-  //happy coding!
-  for (let i = 0; i <= A - 1; i += 1){
-    let i = A[i];
-    console.log(i);
-  }
-  return 0;
-}
-findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5], 5);
+// function findOdd(A) {
+//   //happy coding!
+//   for (let i = 0; i <= A - 1; i += 1){
+//     let i = A[i];
+//     console.log(i);
+//   }
+//   return 0;
+// }
+// findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5], 5);
 
 
 // Я на для тренировки на свичах делал задачу с freecodecamp по переводу числа (1-3999) из римских цифр в обычные
@@ -345,45 +353,45 @@ findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5], 5);
 
 // --------------------------------------codewar 1 ----------------------------------
 
-function isValidWalk(walk) {
-   //insert brilliant code here
-  const north = 1;
-    const south = -1;
-    const east = 1;
-    const west = -1;
-    let verticalWalkNorthsSouth = 0;
-    let horizontalWalkEastWest = 0;
-    for (let i = 0; i <= walk.length - 1; i += 1){
-      if (walk[i].includes('n')) {
-        walk[i] = north;
-        verticalWalkNorthsSouth += walk[i];
-      } else if (walk[i].includes('s')) {
-        walk[i] = south;
-        verticalWalkNorthsSouth += walk[i];
-      } else if (walk[i].includes('e')) {
-        walk[i] = east;
-        horizontalWalkEastWest+= walk[i];
-      } else if (walk[i].includes('w')) {
-        walk[i] = west;
-        horizontalWalkEastWest+= walk[i];
-      }
-    }
-    if (horizontalWalkEastWest + verticalWalkNorthsSouth === 0 && walk.length === 10) {
-      return console.log('should return true');
-    } else {
-      return console.log('should return false');
-    }
-}
+// function isValidWalk(walk) {
+//    //insert brilliant code here
+//   const north = 1;
+//     const south = -1;
+//     const east = 1;
+//     const west = -1;
+//     let verticalWalkNorthsSouth = 0;
+//     let horizontalWalkEastWest = 0;
+//     for (let i = 0; i <= walk.length - 1; i += 1){
+//       if (walk[i].includes('n')) {
+//         walk[i] = north;
+//         verticalWalkNorthsSouth += walk[i];
+//       } else if (walk[i].includes('s')) {
+//         walk[i] = south;
+//         verticalWalkNorthsSouth += walk[i];
+//       } else if (walk[i].includes('e')) {
+//         walk[i] = east;
+//         horizontalWalkEastWest+= walk[i];
+//       } else if (walk[i].includes('w')) {
+//         walk[i] = west;
+//         horizontalWalkEastWest+= walk[i];
+//       }
+//     }
+//     if (horizontalWalkEastWest + verticalWalkNorthsSouth === 0 && walk.length === 10) {
+//       return console.log('should return true');
+//     } else {
+//       return console.log('should return false');
+//     }
+// }
 
-isValidWalk(['n', 'w', 'n', 'e', 'e', 'e', 's', 'w', 'n', 'w']);
-isValidWalk(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's']);
-isValidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']);
-isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']);
-isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']);
-isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']);
-isValidWalk(['w', 's']);
-isValidWalk(['w', 'e']);
-isValidWalk(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's']);
+// isValidWalk(['n', 'w', 'n', 'e', 'e', 'e', 's', 'w', 'n', 'w']);
+// isValidWalk(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's']);
+// isValidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']);
+// isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']);
+// isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']);
+// isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']);
+// isValidWalk(['w', 's']);
+// isValidWalk(['w', 'e']);
+// isValidWalk(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's']);
 
 // function isValidWalk(walk) {
 //   //insert brilliant code here
@@ -447,32 +455,39 @@ isValidWalk(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's']);
 // even_or_odd(0);
 
 // --------------------------------------codewar 4 ---------------------------------
-function DNAStrand(dna){
-  //your code here
-    const array = dna.split('');
-    console.log(array);
-    const A = "A";
-    const T = "T";
-    const G = "G";
-    const C = "C";
-    for (let i = 0; i < array.length; i += 1) {
-        if (array[i] === A) {
-           array = array.splise(array[i], 1, T);
-        } else if (array[i] === T) {
-           array = array.splise(array[i], 1, A);
-        } else if (array[i] === C) {
-           array = array.splise(array[i], 1, G);
-        } else if (array[i] === G) {
-          array = array.splise(array[i], 1, C);
-        }
-    }
-    const newDpa = array.join('');
-    console.log(newDpa);
-    return newDpa;
-}
-DNAStrand("AAAA");
-DNAStrand("ATTGC");
-DNAStrand("GTAT");
-DNAStrand("");
-DNAStrand("TACC");
-DNAStrand("GGCC");
+
+// function DNAStrand(dna){
+//   //your code here
+//     let array = dna.split('');
+//     console.log(array);
+//     const A = "A";
+//     const T = "T";
+//     const G = "G";
+//     const C = "C";
+//     for (let i = 0; i < array.length; i += 1) {
+//       if (array[i] === A) {
+//         array.splice(i, 1, T);
+//         continue;
+//       }
+//       if (array[i] === T) {
+//         array.splice(i, 1, A);
+//         continue;
+//       }
+//       if (array[i] === C) {
+//           array.splice(i, 1, G);
+//           continue;
+//       }
+//       if (array[i] === G) {
+//           array.splice(i, 1, C);
+//       }
+//     }
+//     const newDpa = array.join('');
+//     console.log(newDpa);
+//     return newDpa;
+// }
+// DNAStrand("AGAA");
+// DNAStrand("ATTGC");
+// DNAStrand("GTAT");
+// DNAStrand("");
+// DNAStrand("TACC");
+// DNAStrand("GGCC");

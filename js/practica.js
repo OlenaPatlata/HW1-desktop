@@ -199,3 +199,93 @@
 // Result: 'Alona'
 
 // Result: 'alona'
+
+// ------------------------------------Задачи за 19.01.2022--------------------------------
+// -------------------------------------------------задача
+// Write a function that reverse an integer number. You can't use any array methods, besides push.
+// reverseNumber(12345) returns 54321
+// -12345
+// -54321
+// function param(data) {
+//     let b = 1;
+//     if (data < 0) {
+//         data = data * (-1);
+//         b = -1;
+//     }
+//     const paramStr = data.toString();
+//     const arrParam = paramStr.split('');
+//     const reversArr = [];
+//     for (let i = arrParam.length - 1; i > -1; i -= 1) {
+//         reversArr.push(arrParam[i]);
+//     }
+//     const newString = reversArr.toString();
+//         console.log((Number(newString.replaceAll(',', '')))*b)
+//     return newString;
+// }
+// param(12345);
+// param(-12345);
+
+
+// -------------------------------------------------задача
+// // Write a function that converts the argument values. If it will be a string, convert it to number and wise versa. Напишите функцию, которая преобразует значения аргументов. Если это будет строка, преобразуйте ее в число и наоборот.
+// // It should return an array of converted values. Он должен возвращать массив преобразованных значений.
+
+// function convertsArgument(...args) {
+//     let newArr = [];
+//     for (let variable of args) {
+//         if (typeof variable !== "string") {
+//             newArr.push(String(variable));
+//             continue;
+//         }  newArr.push(Number(variable));
+//     }
+//         console.log(newArr);
+//         return newArr;
+// }
+// convertsArgument(2, '1', 2, 3, '4');
+
+// -------------------------------------------------задача
+// Write a function that checks is array contains arg passed as a parameter value and return true in this case.
+// Напишите функцию, которая проверяет, содержит ли массив аргумент, переданный в качестве значения параметра, и возвращает true в этом случае.
+// // containsValue([2, 5, 8], 2)  // returns true
+// // containsValue([12, 4, 6], 5)  // returns false
+
+// function containsValue(a, b) {
+//     for (const variable of a) {
+//         if (variable !== b) {
+//             return console.log(false);
+//             continue;
+//         }return console.log(true)
+//     }
+// }
+// containsValue([2, 5, 8], 2);
+// containsValue([12, 4, 6], 5);
+
+
+
+
+
+// -------------------------------------------------задача
+// Write a function which creates an array from the given range of numbers
+    // Напишите функцию, которая создает массив из заданного диапазона чисел
+    // // makeListFromRange([2, 7]) // [2, 3, 4, 5, 6, 7]
+// // makeListFromRange([8, 5]) // [5, 6, 7, 8]
+
+// function makeListFromRange(array) {
+//     let newArray = [];
+//     let startIndex = array[0];
+//     let lastIndex = array[1];
+//     if (lastIndex > startIndex) {
+//         for (let i = startIndex; i <= lastIndex; i += 1) {
+//             newArray.push(i);
+//         }
+//     } else {
+//         for (let i = lastIndex; i <= startIndex; i += 1) {
+//             newArray.push(i);
+//         }
+//     }
+//     console.log(newArray);
+//         return newArray;
+// }
+// makeListFromRange([2, 7]);
+// makeListFromRange([8, 5]);
+// makeListFromRange([10, 0]);
