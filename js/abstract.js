@@ -66,3 +66,26 @@
 // console.log(bookShelf.getBooks()); // ['The Last Kingdom', 'The Mist', 'Dream Guardian']
 // bookShelf.removeBook("The Mist");
 // console.log(bookShelf.getBooks()); // ['The Last Kingdom', 'Dream Guardian']
+
+const user = {
+  name: "Jacques Gluke",
+  tag: "jgluke",
+  stats: {
+    followers: 5603,
+    views: 4827,
+    likes: 1308,
+  },
+};
+
+const {
+  name,
+  tag,
+  stats: { followers, views: userViews, likes: userLikes = 0 },
+} = user;
+
+console.log(name); // Jacques Gluke
+console.log(tag); // jgluke
+console.log(followers); // 5603
+console.log(userViews); // 4827
+console.log(userLikes); // 1308
+console.log(user.stats.likes);

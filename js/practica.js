@@ -438,37 +438,51 @@ const users = [
   },
 ];
 
+// вариант 1
+// function createObjects(prmtr) {
+//     console.table(prmtr);
+//     const setObjects = {};
+//     const keys = Object.keys(prmtr[0]);
+//     for (const key of keys) {
+//         setObjects[key] = [];
+//         for (let i = 0; i < prmtr.length; i += 1) {
+//         setObjects[key].push(prmtr[i][key]);
+//     }
+//     }
+// return setObjects
+// }
+// console.log(createObjects(users));
 
-function createObjects(prmtr) {
-    console.table(prmtr);
+// вариант 2
+function createObjects(parameters) {
+    console.table(parameters);
     const setObjects = {};
-    const keys = Object.keys(prmtr[0]);
+    const keys = Object.keys(parameters[0]);
     for (const key of keys) {
         setObjects[key] = [];
-        for (let i = 0; i < prmtr.length; i += 1) {
-        setObjects[key].push(prmtr[i][key]);
+        for (const parameter of parameters) {
+            setObjects[key].push(parameter[key]);
+        }
     }
-    }
-return setObjects
+    return setObjects;
 }
-
 console.log(createObjects(users));
 
 
 // -----------------Пример для решения-----------ДЗ 17/41 модуль 3
-const colors = [
-  { hex: "#f44336", rgb: "244,67,54" },
-  { hex: "#2196f3", rgb: "33,150,243" },
-  { hex: "#4caf50", rgb: "76,175,80" },
-  { hex: "#ffeb3b", rgb: "255,235,59" },
-];
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
 
-const hexColors = [];
-const rgbColors = [];
-// Change code below this line
-for (const color of colors) {
-  hexColors.push(color.hex);
-  rgbColors.push(color.rgb);
-  }
-console.log(hexColors);
-console.log(rgbColors);
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+// for (const color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+//   }
+// console.log(hexColors);
+// console.log(rgbColors);
