@@ -905,66 +905,126 @@
 // addPotion(newPotion) - добавляет зелье newPotion (уже объект) в массив в свойстве potions, но только если такого зелья еще нет в инвентаре. В противном случае возвращается строка.
 // removePotion(potionName) - удаляет объект зелья с именем potionName из массива в свойстве potions.
 // updatePotionName(oldName, newName) - обновляет свойство name объекта-зелья с названием oldName на newName в массиве potions.
-const atTheOldToad = {
-  potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Dragon breath", price: 780 },
-    { name: "Stone skin", price: 520 },
-  ],
-  // Change code below this line
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
   
-  getPotions() {
-    return this.potions;
-  },
+//   getPotions() {
+//     return this.potions;
+//   },
 
-  addPotion(newPotion) {
-    for (const potion of this.potions) {
-      if (potion.name === newPotion.name) {
-        return `Error! Potion ${newPotion.name} is already in your inventory!`;
-      } continue;
-    }
-    this.potions.push(newPotion);
-  },
+//   addPotion(newPotion) {
+//     for (const potion of this.potions) {
+//       if (potion.name === newPotion.name) {
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//       } continue;
+//     }
+//     this.potions.push(newPotion);
+//   },
 
-  removePotion(potionName) {
-    const { potions } = this;
-    for (let i = 0; i < potions.length; i += 1){
-      const potion = potions[i];
-      if (potionName === potion.name) {
-        potions.splice(i, 1);
-        return potions;
-      }
-    }return `Potion ${potionName} is not in inventory!`;
-  },
+//   removePotion(potionName) {
+//     const { potions } = this;
+//     for (let i = 0; i < potions.length; i += 1){
+//       const potion = potions[i];
+//       if (potionName === potion.name) {
+//         potions.splice(i, 1);
+//         return potions;
+//       }
+//     }return `Potion ${potionName} is not in inventory!`;
+//   },
 
-  updatePotionName(oldName, newName) {
-    const { potions } = this;
-    for (const potion of potions) {
-      if (potion.name === oldName) {
-        potion.name = newName;
-        return potions;
-      } 
-    }return `Potion ${oldName} is not in inventory!`;
+//   updatePotionName(oldName, newName) {
+//     const { potions } = this;
+//     for (const potion of potions) {
+//       if (potion.name === oldName) {
+//         potion.name = newName;
+//         return potions;
+//       } 
+//     }return `Potion ${oldName} is not in inventory!`;
     
-  },
-  // Change code above this line
-};
+//   },
+//   // Change code above this line
+// };
 
 // console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
-console.table(atTheOldToad.getPotions());
+// console.table(atTheOldToad.getPotions());
 // console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 }));
 // console.log(atTheOldToad.addPotion({ name: "Speed potion", price: 460 }))
 // console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
 // console.log(atTheOldToad.removePotion("Speed potion"));
 // console.log(atTheOldToad.removePotion("Dragon breath"));
 // console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
-console.log(atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"));
+// console.log(atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"));
 
 
+// --------------------------------------ДЗ 3/48 модуль 4
+
+// function makePizza(pizzaName, callback) {
+//   console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+//   callback(pizzaName);
+// }
+
+// makePizza("Royal Grand", function deliverPizza(pizzaName) {
+//   console.log(`Delivering pizza ${pizzaName}.`);
+// });
+// // Change code below this line
+
+// makePizza("Ultracheese", function deliverPizza(pizzaName) {
+//   console.log(`Eating pizza ${pizzaName}.`);
+// });
 
 
+// --------------------------------------ДЗ 4/48 модуль 4
+
+// const pizzaPalace = {
+//   pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+//   order(pizzaName, onSuccess, onError) {
+//     for (const pizza of this.pizzas) {
+//       if (pizza !== pizzaName) {
+//         continue;
+//       }
+//       return onSuccess(pizzaName);
+//     } 
+//     return onError(`There is no pizza with a name ${pizzaName} in the assortment.`);
+//   },
+// };
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// console.log(pizzaPalace.order('Smoked', makePizza, onOrderError));
+// console.log(pizzaPalace.order('Four meats', makePizza, onOrderError));
+// console.log(pizzaPalace.order('Big Mike', makePizza, onOrderError));
+// console.log(pizzaPalace.order('Vienna', makePizza, onOrderError));
 
 
+// --------------------------------------ДЗ 5/48 модуль 4
+
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+  // Change code below this line
+orderedItems.forEach(function(orderedItems){
+   totalPrice += orderedItems;
+}) 
+ 
+  // Change code above this line
+  console.log(totalPrice)
+  return totalPrice;
+}
+console.log(calculateTotalPrice([12, 85, 37, 4]))
 
 // console.log();
 // console.log();

@@ -438,6 +438,35 @@ const users = [
   },
 ];
 
+function generateStatus() {
+    const mathZ = Math.random();
+    if (mathZ <= 0.5) {
+        return true;
+    }
+    return false;
+}
+
+function newArray(users) {
+    const arrCopy = [];
+    for (const user of users) {
+        const object = {...user};
+
+        object.vip = generateStatus();
+        object.skills = "no information";
+        arrCopy.push(object);
+    }
+    
+    return arrCopy;
+}
+console.log(newArray(users));
+console.log(users);
+
+
+
+
+
+
+
 // вариант 1
 // function createObjects(prmtr) {
 //     console.table(prmtr);
@@ -454,19 +483,39 @@ const users = [
 // console.log(createObjects(users));
 
 // вариант 2
-function createObjects(parameters) {
-    console.table(parameters);
-    const setObjects = {};
-    const keys = Object.keys(parameters[0]);
-    for (const key of keys) {
-        setObjects[key] = [];
-        for (const parameter of parameters) {
-            setObjects[key].push(parameter[key]);
-        }
-    }
-    return setObjects;
-}
-console.log(createObjects(users));
+// function createObjects(parameters) {
+//     console.table(parameters);
+//     const setObjects = {};
+//     // собираем массив ключей из первого массива
+//     const keys = Object.keys(parameters[0]);
+//     // перебираем массив ключей и создаем свойства с именами ключей в пустом объекте setObjects
+//     for (const key of keys) {
+//         setObjects[key] = [];
+//         // вытягиваем из каждого объекта значения и пушим в пустые массивы 
+//         for (const parameter of parameters) {
+//             setObjects[key].push(parameter[key]);
+//         }
+//     }
+//     let finalObject = {};
+//     // перебираем значения свойств setObjects[key] и все разглаживаем методом .flat(), чтобы вынуть все вложенные элемнты из массивов. Метод .flat() возвращает новый массив
+//     for (const key in setObjects) {
+//         finalObject[key] = setObjects[key].flat();
+//     }
+//     const lastObject = {};
+// // запускаем цикл в котором создаем свойства в объекте lastObject (пустые массивы для запушивания окончательных элементов после фильтрации)
+//     for (const key in finalObject) {
+//         lastObject[key] = [];
+//         //  запускаем перебор, чтобы найти одинаковые-повторяющиеся элементы в каждом массиве.Используем метод.indexOf,который возвращает индекс первого элемента с запрашиваемым значением 
+//         for (let i = 0; i < finalObject[key].length; i += 1){
+//             if (finalObject[key].indexOf(finalObject[key][i]) === i) {
+//                 lastObject[key].push(finalObject[key][i]); 
+//             }
+//         }
+//     }
+//     return lastObject;
+// }
+// console.log(createObjects(users));
+
 
 
 // -----------------Пример для решения-----------ДЗ 17/41 модуль 3
