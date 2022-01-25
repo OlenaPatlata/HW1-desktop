@@ -1013,21 +1013,277 @@
 
 // --------------------------------------ДЗ 5/48 модуль 4
 
-function calculateTotalPrice(orderedItems) {
-  let totalPrice = 0;
-  // Change code below this line
-orderedItems.forEach(function(orderedItems){
-   totalPrice += orderedItems;
-}) 
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Change code below this line
+// orderedItems.forEach(function(orderedItems){
+//    totalPrice += orderedItems;
+// }) 
  
-  // Change code above this line
-  console.log(totalPrice)
-  return totalPrice;
-}
-console.log(calculateTotalPrice([12, 85, 37, 4]))
+//   // Change code above this line
+//   console.log(totalPrice)
+//   return totalPrice;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]))
 
-// console.log();
-// console.log();
+
+
+
+
+
+// --------------------------------------ДЗ 13/48 модуль 4
+// function changeEven(numbers, value) {
+//   const newArray =[];
+//   // Change code below this line
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] % 2 === 0) {
+//       newArray.push(numbers[i] + value);
+//       continue;
+//     } 
+//     newArray.push(numbers[i]);
+//   }
+//   return newArray;
+//   // Change code above this line
+// }
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+// console.log(changeEven([44, 13, 81, 92, 36, 54], 100));
+
+
+// --------------------------------------ДЗ 22/48 модуль 4
+// Change code below this line
+const users = [
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    gender: "male"
+  },
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    gender: "female"
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    gender: "male"
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    gender: "female"
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    gender: "male"
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    gender: "male"
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    gender: "female"
+  }
+]
+// const getUsersWithEyeColor = (users, color) => {
+//   const allName = [];
+//   users.filter((item) => {
+//     if (color === item.eyeColor) {
+//       allName.push(item);
+//     }
+//     return allName;
+//   });
+//   return allName;
+// }
+// console.log(getUsersWithEyeColor(users, "green"));
+
+
+
+
+// -------------------------задача 23/48
+// Change code below this line
+// const getUsersWithAge = (users, minAge, maxAge) =>  users.filter(user => user.age <=maxAge && user.age>=minAge)
+//     ;
+// // Change code above this line
+
+
+
+
+// -------------------------задача 24/48
+// Change code below this line
+// const getUsersWithFriend = (users, friendName) => users.filter(user=>user.friends.includes(friendName));
+// // Change code above this line
+
+// console.log(getUsersWithFriend(users, "Goldie Gentry"));
+
+
+
+
+// -------------------------задача 25/48
+// Change code below this line
+// const getFriends = (users) => {
+//   const allFriends = users.flatMap(user => user.friends);
+//   const uniqueFriends = allFriends.filter((friend, index, array) => array.indexOf(friend) === index);
+//   return uniqueFriends;
+   
+// };
+// // Change code above this line
+// console.log(getFriends(users));
+
+
+// -------------------------задача 26/48
+// Change code below this line
+// const getActiveUsers = (users) =>   users.filter(user => user.isActive===true);
+// // Change code above this line
+// console.log(getActiveUsers(users));
+
+
+// -------------------------задача 28/48
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+// ];
+// const BOOK_TITLE = 'The Dream of a Ridiculous Man';
+// const AUTHOR = 'Robert Sheckley';
+// // Change code below this line
+
+// const bookWithTitle = books => books.find(book => book.title === BOOK_TITLE);
+// const bookByAuthor = books => books.find(book=>book.author===AUTHOR);
+// console.log(bookWithTitle(books));
+// console.log(bookByAuthor(books));
+
+
+// -------------------------задача 30/48
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change code below this line
+
+// const eachElementInFirstIsEven = firstArray=> firstArray.every(value=>value%2===0);
+// const eachElementInFirstIsOdd = firstArray=> firstArray.every(value=>value%2!==0)
+
+// const eachElementInSecondIsEven = secondArray;
+// const eachElementInSecondIsOdd = secondArray;
+
+// const eachElementInThirdIsEven = thirdArray;
+// const eachElementInThirdIsOdd = thirdArray;
+// console.log(eachElementInFirstIsEven(firstArray));
+// console.log(eachElementInFirstIsOdd(firstArray));
+
+
+
+
+
+const students = [
+  { name: "Манго", score: 83 },
+  { name: "Поли", score: 59 },
+  { name: "Аякс", score: 37 },
+  { name: "Киви", score: 94 },
+];
+
+const inAscendingScoreOrder = students=> students.sort(
+  (firstStudent, secondStudent) => firstStudent.score - secondStudent.score
+);
+
+const inDescendingScoreOrder = students=>students.sort(
+  (firstStudent, secondStudent) => secondStudent.score - firstStudent.score
+);
+
+const inAlphabeticalOrder = students=>students.sort((firstStudent, secondStudent) =>
+  firstStudent.name.localeCompare(secondStudent.name)
+);
+
+console.log(inAscendingScoreOrder(students));
+
+// console.log(inDescendingScoreOrder(students));
+// console.log(inAlphabeticalOrder(students));
+
+
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+];
+// Change code below this line
+
+const sortedByAuthorName = books=>[...books].sort((firstBook, secondBook) =>  firstBook.author.localeCompare(secondBook.author)
+);
+
+const sortedByReversedAuthorName = books=>[...books].sort((firstBook, secondBook) =>  secondBook.author.localeCompare(firstBook.author)
+);
+
+const sortedByAscendingRating = books=> [...books].sort(
+  (firstBook, secondBook) => firstBook.rating - secondBook.rating
+);;
+
+const sortedByDescentingRating = books=> [...books].sort(
+  (firstBook, secondBook) =>  secondBook.rating - firstBook.rating 
+);
+// console.log(sortedByAuthorName(books));
+// console.log(sortedByReversedAuthorName(books));
+// console.log(sortedByAscendingRating(books));
+console.log(sortedByDescentingRating(books));
+console.log(books);
 // console.log();
 // console.log();
 // console.log();
