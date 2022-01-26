@@ -573,6 +573,87 @@
 
 const substitute = array => array.map(item => (item < 20 && item > 10) ? "*": item);
 
-console.log(substitute([58, 14, 48, 12, 31, 19, 10]));
+// console.log(substitute([58, 14, 48, 12, 31, 19, 10]));
 // returns [58, '*', 48, '*', 31, '*', 10]
 
+
+
+// -------------------------------------------------задача #1    26.01.2022
+// Write a function - positiveSum
+// It should accept an array of numbers and return a result of their addition. But you must calculate only positive numbers and omit negative if any presents.
+// Напишите функцию - PositiveSum
+// Он должен принимать массив чисел и возвращать результат их сложения. Но вы должны вычислять только положительные числа и опускать отрицательные, если они есть.
+// const positiveSum = array => array.filter(item => item >= 0).reduce((sum, item) => sum + item, 0)
+const positiveSum = array => array.reduce((newArray, item) => (item>=0 ? newArray+item: newArray), 0)
+// const positiveSum = arr => arr.reduce((acc, el) => (el >= 0 ? acc + el : acc), 0);
+
+// For example:
+// console.log(positiveSum([2, 4, 6, 8]))  // => 20
+// console.log(positiveSum([0, -3, 5, 7]))  // => 12
+
+
+
+
+
+// -------------------------------------------------задача #2   26.01.2022
+// Write a function – letterCount
+// It accepts two string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+// If no occurrences can be found, a count of 0 should be returned.
+
+// const letterCount = (string1, string2) => [...string1.toLowerCase()].filter(elem => elem === string2.toLowerCase()).length;
+
+// const letterCount = (string1, string2) => [...string1.toLowerCase()].reduce((acc, elem )=> (elem === string2.toLowerCase()) ? acc+1 : acc, 0);
+
+// const letterCount = (str, lett) =>
+// 	str
+// 		.toLowerCase()
+// 		.split("")
+// 		.reduce((acc, letter) => (letter === lett ? acc + 1 : acc), 0);
+
+
+// For example:
+// console.log(letterCount("Maggy", "g")) // => 2
+// console.log(letterCount("Barry", "b")) // => 1
+// console.log(letterCount("", "z") )    // => 0
+
+// -------------------------------------------------задача #3   26.01.2022
+// Our football team completed the championship. The result of each match look like "x:y".
+// Results of all matches are recorded in the collection like this: ["3:1", "2:2", "0:1", ...]
+// Write a function – countPoints
+// It should accept a collection of football games scores and count the points of our team in the championship.
+// Rules for counting points for each match:
+// •	if x > y   - 3 points
+// •	if x < y   - 0 point
+// •	if x = y   - 1 point
+// ВАРИАНТ 1 РЕШЕНИЯ
+// const countPoints = array => array.reduce((acc, elem) => {
+//     if (elem[0] > elem[2]) {
+//        return acc + 3;
+//     } else if (elem[0] === elem[2]) {
+//         return acc + 1;
+//     } return acc;
+// }, 0)
+// ВАРИАНТ 2 РЕШЕНИЯ
+// const countPoints = array => array.filter(elem => (elem[0] > elem[2])).length * 3 + array.filter(elem => (elem[0] === elem[2])).length
+// For example:
+// console.log(countPoints(['3:1', '1:0', '0:0', '1:2', '4:0', '2:3', '1:1', '0:1', '2:1', '1:0'])) // => 17
+// countPoints(['1:1', '1:2', '2:0', '4:2', '0:1', '2:3', '1:1', '0:1', '1:1', '3:0']) // => 12
+
+const getSums = array => array.reduce((total, elem,) => {
+    console.log([total.push(elem)])
+    return total
+}, [])
+
+const array = [1, 2, 3, 4, 5]
+const arrayNew = [];
+let total = 0;
+for (let item of array) {
+        arrayNew.push(total += item);
+}
+console.log(arrayNew)
+
+
+
+// [1, 3, 6, 10, 15]
+
+// console.log(getSums([1, 2, 3, 4, 5]))

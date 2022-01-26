@@ -1192,8 +1192,8 @@ const users = [
 // const AUTHOR = 'Robert Sheckley';
 // // Change code below this line
 
-// const bookWithTitle = books => books.find(book => book.title === BOOK_TITLE);
-// const bookByAuthor = books => books.find(book=>book.author===AUTHOR);
+const bookWithTitle = books => books.find(book => book.title === BOOK_TITLE);
+const bookByAuthor = books => books.find(book=>book.author===AUTHOR);
 // console.log(bookWithTitle(books));
 // console.log(bookByAuthor(books));
 
@@ -1238,13 +1238,81 @@ const inAlphabeticalOrder = students=>students.sort((firstStudent, secondStudent
   firstStudent.name.localeCompare(secondStudent.name)
 );
 
-console.log(inAscendingScoreOrder(students));
+// console.log(inAscendingScoreOrder(students));
 
 // console.log(inDescendingScoreOrder(students));
 // console.log(inAlphabeticalOrder(students));
 
 
 
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// Change code below this line
+
+// const sortedByAuthorName = books=>[...books].sort((firstBook, secondBook) =>  firstBook.author.localeCompare(secondBook.author)
+// );
+
+// const sortedByReversedAuthorName = books=>[...books].sort((firstBook, secondBook) =>  secondBook.author.localeCompare(firstBook.author)
+// );
+
+// const sortedByAscendingRating = books=> [...books].sort(
+//   (firstBook, secondBook) => firstBook.rating - secondBook.rating
+// );;
+
+// const sortedByDescentingRating = books=> [...books].sort(
+//   (firstBook, secondBook) =>  secondBook.rating - firstBook.rating 
+// );
+// console.log(sortedByAuthorName(books));
+// console.log(sortedByReversedAuthorName(books));
+// console.log(sortedByAscendingRating(books));
+// console.log(sortedByDescentingRating(books));
+
+// -----------------------------задач 42/48 блок 4
+// Change code below this line
+// const sortByAscendingBalance = users => users.sort((user1, user2) => user1.balance- user2.balance)
+   
+;
+// Change code above this line
+// console.log(sortByAscendingBalance(users))
+
+
+
+// -----------------------------задач 43/48 блок 4
+// Change code below this line
+const sortByDescendingFriendCount = users =>[... users].sort((user1, user2)=> (user2.friends).length - (user1.friends).length);
+// Change code above this line
+// console.log(sortByDescendingFriendCount(users))
+
+
+
+
+
+
+// -----------------------------задачa 44/48 блок 4
+// Change code below this line
+const sortByName = users => [...users].sort((user1, user2)=>user1.name.localeCompare(user2.name));
+// Change code above this line
+// console.log(sortByName(users))
+
+
+// -----------------------------задачa 45/48 блок 4
 const books = [
   {
     title: "The Last Kingdom",
@@ -1262,28 +1330,28 @@ const books = [
     rating: 7.75,
   },
   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
-  { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+  {
+    title: "The Dreams in the Witch House",
+    author: "Howard Lovecraft",
+    rating: 8.67,
+  },
 ];
+const MIN_BOOK_RATING = 8;
 // Change code below this line
 
-const sortedByAuthorName = books=>[...books].sort((firstBook, secondBook) =>  firstBook.author.localeCompare(secondBook.author)
-);
+const names = books.filter(book => book.rating > MIN_BOOK_RATING).sort((book1, book2) => book1.author.localeCompare(book2.author)).map(a => a.author);
+// console.log(names);
 
-const sortedByReversedAuthorName = books=>[...books].sort((firstBook, secondBook) =>  secondBook.author.localeCompare(firstBook.author)
-);
+// -----------------------------задачa 47/48 блок 4
+// Change code below this line
+const getSortedFriends = users => users.flatMap(user=>user.friends).filter((friend, index, array)=>array.indexOf(friend)===index).sort((friend1, friend2) => friend1.localeCompare(friend2));
+// Change code above this line
+console.log(getSortedFriends(users));
 
-const sortedByAscendingRating = books=> [...books].sort(
-  (firstBook, secondBook) => firstBook.rating - secondBook.rating
-);;
 
-const sortedByDescentingRating = books=> [...books].sort(
-  (firstBook, secondBook) =>  secondBook.rating - firstBook.rating 
-);
-// console.log(sortedByAuthorName(books));
-// console.log(sortedByReversedAuthorName(books));
-// console.log(sortedByAscendingRating(books));
-console.log(sortedByDescentingRating(books));
-console.log(books);
+
+
+// console.log(books);
 // console.log();
 // console.log();
 // console.log();
