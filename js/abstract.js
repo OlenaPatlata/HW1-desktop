@@ -102,7 +102,7 @@ const doMath = function (a, b, callback) {
 const add = function (x, y) {
     return x + y;
 }
-doMath(2, 3, add);
+// doMath(2, 3, add);
 
 // doMath(2, 3, function (x, y) {
 //     return x + y;
@@ -111,3 +111,20 @@ doMath(2, 3, add);
 // doMath(10, 8, function (x, y) {
 //     return x - y;
 // });
+
+
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+const likesAll = tweets => tweets.reduce((acc, elem) => acc + elem.likes, 0)
+// console.log(likesAll(tweets))
+const getTags = tweets => tweets.reduce((allTags, elem) => {
+    allTags.push(...elem.tags)
+    // console.log(allTags.push(...elem.tags))
+    return allTags
+}, [])
+console.log(getTags(tweets))

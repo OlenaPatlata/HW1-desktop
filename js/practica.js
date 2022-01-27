@@ -351,92 +351,92 @@
 // -------------------------------------------------Задача
 // Написать функцию, которая чтобы значением был массив всех значений объекта всех значений users
 
-// const users = [
-//   {
-//     id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
-//     name: 'Moore Hensley',
-//     email: 'moorehensley@indexia.com',
-//     eyeColor: 'blue',
-//     friends: ['Sharron Pace'],
-//     isActive: false,
-//     balance: 2811,
-//     skills: ['ipsum', 'lorem'],
-//     gender: 'male',
-//     age: 37,
-//   },
-//   {
-//     id: '7a3cbd18-57a1-4534-8e12-1caad921bda1',
-//     name: 'Sharlene Bush',
-//     email: 'sharlenebush@tubesys.com',
-//     eyeColor: 'blue',
-//     friends: ['Briana Decker', 'Sharron Pace'],
-//     isActive: true,
-//     balance: 3821,
-//     skills: ['tempor', 'mollit', 'commodo', 'veniam', 'laborum'],
-//     gender: 'female',
-//     age: 34,
-//   },
-//   {
-//     id: '88beb2f3-e4c2-49f3-a0a0-ecf957a95af3',
-//     name: 'Ross Vazquez',
-//     email: 'rossvazquez@xinware.com',
-//     eyeColor: 'green',
-//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
-//     isActive: false,
-//     balance: 3793,
-//     skills: ['nulla', 'anim', 'proident', 'ipsum', 'elit'],
-//     gender: 'male',
-//     age: 24,
-//   },
-//   {
-//     id: '249b6175-5c30-44c6-b154-f120923736f5',
-//     name: 'Elma Head',
-//     email: 'elmahead@omatom.com',
-//     eyeColor: 'green',
-//     friends: ['Goldie Gentry', 'Aisha Tran'],
-//     isActive: true,
-//     balance: 2278,
-//     skills: ['adipisicing', 'irure', 'velit'],
-//     gender: 'female',
-//     age: 21,
-//   },
-//   {
-//     id: '334f8cb3-eb04-45e6-abf4-4935dd439b70',
-//     name: 'Carey Barr',
-//     email: 'careybarr@nurali.com',
-//     eyeColor: 'blue',
-//     friends: ['Jordan Sampson', 'Eddie Strong'],
-//     isActive: true,
-//     balance: 3951,
-//     skills: ['ex', 'culpa', 'nostrud'],
-//     gender: 'male',
-//     age: 27,
-//   },
-//   {
-//     id: '150b00fb-dd82-427d-9faf-2879ea87c695',
-//     name: 'Blackburn Dotson',
-//     email: 'blackburndotson@furnigeer.com',
-//     eyeColor: 'brown',
-//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
-//     isActive: false,
-//     balance: 1498,
-//     skills: ['non', 'amet', 'ipsum'],
-//     gender: 'male',
-//     age: 38,
-//   },
-//   {
-//     id: 'e1bf46ab-7168-491e-925e-f01e21394812',
-//     name: 'Sheree Anthony',
-//     email: 'shereeanthony@kog.com',
-//     eyeColor: 'brown',
-//     friends: ['Goldie Gentry', 'Briana Decker'],
-//     isActive: true,
-//     balance: 2764,
-//     skills: ['lorem', 'veniam', 'culpa'],
-//     gender: 'female',
-//     age: 39,
-//   },
-// ];
+const users = [
+  {
+    id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    skills: ['ipsum', 'lorem'],
+    gender: 'male',
+    age: 37,
+  },
+  {
+    id: '7a3cbd18-57a1-4534-8e12-1caad921bda1',
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    skills: ['tempor', 'mollit', 'commodo', 'veniam', 'laborum'],
+    gender: 'female',
+    age: 34,
+  },
+  {
+    id: '88beb2f3-e4c2-49f3-a0a0-ecf957a95af3',
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    skills: ['nulla', 'anim', 'proident', 'ipsum', 'elit'],
+    gender: 'male',
+    age: 24,
+  },
+  {
+    id: '249b6175-5c30-44c6-b154-f120923736f5',
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    skills: ['adipisicing', 'irure', 'velit'],
+    gender: 'female',
+    age: 21,
+  },
+  {
+    id: '334f8cb3-eb04-45e6-abf4-4935dd439b70',
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
+    isActive: true,
+    balance: 3951,
+    skills: ['ex', 'culpa', 'nostrud'],
+    gender: 'male',
+    age: 27,
+  },
+  {
+    id: '150b00fb-dd82-427d-9faf-2879ea87c695',
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    isActive: false,
+    balance: 1498,
+    skills: ['non', 'amet', 'ipsum'],
+    gender: 'male',
+    age: 38,
+  },
+  {
+    id: 'e1bf46ab-7168-491e-925e-f01e21394812',
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    skills: ['lorem', 'veniam', 'culpa'],
+    gender: 'female',
+    age: 39,
+  },
+];
 
 // function generateStatus() {
 //     const mathZ = Math.random();
@@ -639,21 +639,138 @@ const positiveSum = array => array.reduce((newArray, item) => (item>=0 ? newArra
 // console.log(countPoints(['3:1', '1:0', '0:0', '1:2', '4:0', '2:3', '1:1', '0:1', '2:1', '1:0'])) // => 17
 // countPoints(['1:1', '1:2', '2:0', '4:2', '0:1', '2:3', '1:1', '0:1', '1:1', '3:0']) // => 12
 
-const getSums = array => array.reduce((total, elem,) => {
-    console.log([total.push(elem)])
-    return total
-}, [])
-
 const array = [1, 2, 3, 4, 5]
-const arrayNew = [];
-let total = 0;
-for (let item of array) {
-        arrayNew.push(total += item);
-}
-console.log(arrayNew)
+// ВАРИАНТ 1 ДЛЯ РЕШЕНИЯ
+// const arrayNew = [];
+// let total = 0;
+// for (let item of array) {
+//         arrayNew.push(total += item);
+// }
+// console.log(arrayNew)
 
 
+// ВАРИАНТ 2 ДЛЯ РЕШЕНИЯ
+// const getSums =
 
-// [1, 3, 6, 10, 15]
+// ВАРИАНТ 3 ДЛЯ РЕШЕНИЯ
+// const getSums = array =>
+//   [...array].reduce((acc, num, index) => {
+//     if (index === 0) {
+//       acc[index] = num;
+//       return acc;
+//     }
+//     acc[index] = acc[index - 1] + num;
+//     return acc;
+//   }, []);
+
+// ВАРИАНТ 4 ДЛЯ РЕШЕНИЯ
+//   const getSums = array =>
+//   [...array].reduce((acc, num, index) => {
+//     if (index === 0) {
+//       acc[index] = num;
+//       return acc;
+//     }
+//     acc[index] = acc[index - 1] + num;
+//     return acc;
+//   }, []);
+
 
 // console.log(getSums([1, 2, 3, 4, 5]))
+
+
+// ----------- ЗАДАЧИ ПРАКТИКА ЗА 27.01.2022
+// ----------- ЗАДАЧА № 1 ПРАКТИКА ЗА 27.01.2022
+// // Write a function that accepts an array of object and returns new array of values by passed key name.
+// // That function should not change the original array.
+// // Напишите функцию, которая принимает массив объектов и возвращает новый массив значений по переданному имени ключа.
+// // Эта функция не должна изменять исходный массив.
+const fruits = [
+  { name: "apple", weight: 0.5 },
+  { name: "pineapple", weight: 2 }
+];
+
+const getArrayOfKeys = (array, key) => array.reduce((acc, item) => {
+    acc.push(item[key])
+    return acc
+}, [])
+
+// console.log(getArrayOfKeys(fruits, 'name'));
+// getArrayOfKeys(fruits, ‘name’);
+// returns [‘apple’, ‘pineapple’]
+
+
+
+
+// ----------- ЗАДАЧА № 2 ПРАКТИКА ЗА 27.01.2022
+
+const first = [1, 3, 3, 4, 6, 5, 4];
+const second = [6, 3, 5, 2, 2];
+const third = [8, 13, 222, 93, 43, 11];
+const fourth = [8, 222, 12, 93, 77, 83, 12, 43];
+
+    // вариант решения 1
+const getUnique = (first, second) => {
+    const filteredFirstArray = first.filter(item => !second.includes(item));
+    const filteredSecondArray = second.filter(item => !first.includes(item));
+    const newArray = [...filteredFirstArray, ...filteredSecondArray].filter((elem, index, array) => array.indexOf(elem) === index).sort ((a,b)=> a-b);
+    return newArray;
+}
+    // вариант решения 2
+// const getUnique = (first, second) => {
+//   return [
+//     ...first.filter((el) => !second.includes(el)),
+//     ...second.filter((el) => !first.includes(el)),
+//   ]
+//     .sort((a, b) => a - b)
+//     .filter((e, i, arr) => i === arr.indexOf(e));
+// };
+
+    // вариант решения 3
+// const getUnique = (arr1, arr2) =>
+//   [...arr1.filter(el => !arr2.includes(el)), ...arr2.filter(el => !arr1.includes(el))]
+//     .reduce((acc, el) => (!acc.includes(el) ? [...acc, el] : acc), [])
+//     .sort((a, b) => a - b);
+
+// console.log(getUnique(first, second)); // [1, 2, 4]
+// console.log(getUnique(third, fourth)); // [11, 12, 13, 77, 83]
+
+
+// ----------- ЗАДАЧА № 3 ПРАКТИКА ЗА 27.01.2022
+// Подсчитать баланс всех юзеров чей возраст больше 30
+const sumBalance = users => users.reduce((acc, user) => user.age > 30 ? acc + user.balance : acc, 0);
+// console.log(sumBalance(users));
+
+
+
+
+// ----------- ЗАДАЧА № 4 ПРАКТИКА ЗА 27.01.2022
+// На выходе получить новый массив с одним другом у каждого юзера
+// const changeKey = users => users.map(user => {
+//     const newArr = ({ ...user });
+//     newArr.bestFriend = user.friends[0]
+//     const { friends, ...newArrOneFrend } = newArr
+//     return newArrOneFrend
+// })
+
+const changeKey = users => users.map(({ friends, ...obj }) => ({...obj, bestFriend:friends[0]}))
+console.log(changeKey(users));
+
+
+
+
+
+
+
+
+
+// Задача лекция Таня
+// Напишите функцию, которая разделяет массив на части заданного размера.
+// const chunk = (array, maxSize) => array.reduce((acc, num) => {
+
+// }, [[]]);
+// const data = [1, 2, 3, 4, 5, 6, 7];
+// console.log(chunk(data, 2)); // [[1, 2], [3, 4], [5, 6], [7]]
+// console.log(chunk(data, 3)); // [[1, 2, 3], [4, 5, 6], [7]]
+// console.log(chunk(data, 4)); // [[1, 2, 3, 4], [5, 6, 7]]
+// console.log(chunk(data, 1)); // [[1], [2], [3], [4], [5], [6], [7]]
+
