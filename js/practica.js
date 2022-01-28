@@ -753,7 +753,18 @@ const sumBalance = users => users.reduce((acc, user) => user.age > 30 ? acc + us
 // })
 
 const changeKey = users => users.map(({ friends, ...obj }) => ({...obj, bestFriend:friends[0]}))
-console.log(changeKey(users));
+// console.log(changeKey(users));
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -766,6 +777,7 @@ console.log(changeKey(users));
 // Задача лекция Таня
 // Напишите функцию, которая разделяет массив на части заданного размера.
 // const chunk = (array, maxSize) => array.reduce((acc, num) => {
+
 
 // }, [[]]);
 // const data = [1, 2, 3, 4, 5, 6, 7];
