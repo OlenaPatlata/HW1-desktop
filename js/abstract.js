@@ -127,4 +127,27 @@ const getTags = tweets => tweets.reduce((allTags, elem) => {
     // console.log(allTags.push(...elem.tags))
     return allTags
 }, [])
-console.log(getTags(tweets))
+// console.log(getTags(tweets))
+
+
+
+class Storage {
+    items = [];
+    getItems(){
+return this.items;
+    };
+    addItem(newItem){
+this.items.push(newItem)
+    };
+    removeItem(itemToRemove){
+// this.items
+    };
+}
+
+// Change code above this line
+const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+storage.addItem("Droid");
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+storage.removeItem("Prolonger");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]

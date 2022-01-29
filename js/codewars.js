@@ -61,4 +61,6 @@ const maps = x => x.map(number => number * 2);
 // -----------------------------------------------------------
 const litres = time => Math.floor(time / 2);
 
-console.log(litres(12.3));
+// console.log(litres(12.3));
+
+// -----------------------------------------------------------

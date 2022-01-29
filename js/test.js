@@ -1192,8 +1192,8 @@ const users = [
 // const AUTHOR = 'Robert Sheckley';
 // // Change code below this line
 
-const bookWithTitle = books => books.find(book => book.title === BOOK_TITLE);
-const bookByAuthor = books => books.find(book=>book.author===AUTHOR);
+// const bookWithTitle = books => books.find(book => book.title === BOOK_TITLE);
+// const bookByAuthor = books => books.find(book=>book.author===AUTHOR);
 // console.log(bookWithTitle(books));
 // console.log(bookByAuthor(books));
 
@@ -1288,7 +1288,7 @@ const inAlphabeticalOrder = students=>students.sort((firstStudent, secondStudent
 // Change code below this line
 // const sortByAscendingBalance = users => users.sort((user1, user2) => user1.balance- user2.balance)
    
-;
+
 // Change code above this line
 // console.log(sortByAscendingBalance(users))
 
@@ -1345,9 +1345,30 @@ const names = books.filter(book => book.rating > MIN_BOOK_RATING).sort((book1, b
 // -----------------------------задачa 47/48 блок 4
 // Change code below this line
 const getSortedFriends = users => users.flatMap(user=>user.friends).filter((friend, index, array)=>array.indexOf(friend)===index).sort((friend1, friend2) => friend1.localeCompare(friend2));
+console.log("🚀 ~ file: test.js ~ line 1348 ~ users", users)
 // Change code above this line
-console.log(getSortedFriends(users));
+// console.log(getSortedFriends(users));
 
+class Storage {
+    items= [];
+}
+Storage.prototype.getItems = function(){
+return this.items;
+};
+Storage.prototype.addItem= function(newItem){
+this.items.push(newItem)
+};
+Storage.prototype.removeItem=function(itemToRemove){
+this.items
+};
+
+// Change code above this line
+const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+storage.addItem("Droid");
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+storage.removeItem("Prolonger");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
 
 
