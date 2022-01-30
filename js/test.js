@@ -1345,32 +1345,153 @@ const names = books.filter(book => book.rating > MIN_BOOK_RATING).sort((book1, b
 // -----------------------------задачa 47/48 блок 4
 // Change code below this line
 const getSortedFriends = users => users.flatMap(user=>user.friends).filter((friend, index, array)=>array.indexOf(friend)===index).sort((friend1, friend2) => friend1.localeCompare(friend2));
-console.log("🚀 ~ file: test.js ~ line 1348 ~ users", users)
+// console.log("🚀 ~ file: test.js ~ line 1348 ~ users", users)
 // Change code above this line
 // console.log(getSortedFriends(users));
 
+
+// -----------------------------задачa 10/20 блок 5
 class Storage {
-    items= [];
-}
-Storage.prototype.getItems = function(){
+  constructor(items) {
+    this.items = items;
+  }
+getItems (){
 return this.items;
 };
-Storage.prototype.addItem= function(newItem){
+addItem (newItem){
 this.items.push(newItem)
 };
-Storage.prototype.removeItem=function(itemToRemove){
-this.items
+removeItem (itemToRemove){
+  this.items.splice(this.items.indexOf(itemToRemove), 1)
 };
+}
 
 // Change code above this line
+
 const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// console.dir(storage)
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
 storage.addItem("Droid");
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 storage.removeItem("Prolonger");
-console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
 
+// -----------------------------задачa 11/20 блок 5
+class StringBuilder{
+    constructor(value ){
+        this.value =value 
+    }
+    getValue(){
+        return this.value;
+    }
+    padEnd(str){
+        this.value=`${this.value}${str}`
+    }
+    padStart(str){
+        this.value=str+this.value
+    }
+    padBoth(str){
+       this.value= str+this.value+str
+    }
+}
+
+
+// Change code above this line
+const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
+
+
+
+
+// -----------------------------задачa 16/20 блок 5
+class Car {
+  // Change code below this line
+  #price;
+  static MAX_PRICE = 50000;
+  
+  constructor({ name, price }) {
+    this.#price = price;
+    this.name = name;
+  }
+
+  get price() {
+    return this.#price;
+  }
+
+  set price(newPrice) {
+    if (newPrice > Car.MAX_PRICE) {
+      console.log('error')
+      return;
+    }
+    this.#price = newPrice;
+  }
+}
+const audi = new Car({ name: 'dada', price: 35000 });
+console.log(audi.price); // 35000
+
+audi.price = 49000;
+console.log(audi.price); // 49000
+
+audi.price = 51000;
+console.log(audi.price); // 49000
+console.log(audi)
+
+
+// ----------------------------Репета
+class CarAll {
+    static description = 'Класс описывающий автомобиль';
+  static MAX_PRICE=50000;
+    static logInfo(carObj) {
+        console.log('Car.logInfo -> carObj', carObj);
+    }
+
+    constructor({ brand, model, price } = {}) {
+        this.brand = brand;
+        this._model = model;
+        this._price = price;
+    }
+
+    get price() {
+        return this._price;
+    }
+
+  set price(newPrice) {
+    if (newPrice <= this.MAX_PRICE) {
+      this._price = newPrice;
+    }
+    }
+
+    get model() {
+        return this._model;
+    }
+
+    set model(newModel) {
+        this._model = newModel;
+    }
+}
+// console.log(CarAll.MAX_PRICE)
+const carInstance = new CarAll({
+    brand: 'Audi',
+    model: 'Q3',
+    price: 35000,
+});
+
+// console.log(carInstance.model);
+carInstance.model = 'Q4';
+// console.log(carInstance.model);
+
+// console.log(carInstance.price);
+carInstance.price = 49000;
+// console.log(carInstance.price);
+
+// console.log(carInstance);
 
 // console.log(books);
 // console.log();
