@@ -756,12 +756,160 @@ const changeKey = users => users.map(({ friends, ...obj }) => ({...obj, bestFrie
 // console.log(changeKey(users));
 
 
+// ----------- ЗАДАЧА № 1 ПРАКТИКА ЗА 31.01.2022
+// class Student {
+//   #name;
+//   #email;
+//   #hwResults;
+  
+//   constructor({ name, email }) {
+//     this.#name = name;
+//     this.#email = email
+
+//   }
+//     getName() {
+//     return this.#name;
+//   }
+//   getEmail() {
+//     return this.#email;
+//   }
+//   getHwResults() {
+//     return this.#hwResults;
+//   }
+//   addHwResult(topic, success) {
+//     this.#hwResults.push({ topic, success });
+//   }
+// }
+// const mango = new Student({name: 'Mango',
+//   email: 'mango@mail.com'
+// })
+  // console.log(mango)
 
 
 
 
+// ----------- ЗАДАЧА № 2 ПРАКТИКА ЗА 31.01.2022
+const Student = function (name, email) {
+  const hwResults = [];
+
+  this.getName = function () {
+    return name;
+  };
+  this.getEmail = function () {
+    return email;
+  };
+  this.getHwResults = function () {
+    return hwResults;
+  };
+  this.addHwResult = function (topic, success) {
+    hwResults.push({ topic, success });
+  };
+};
+
+const poly = new Student('Poly', 'poly@mail.com')
+console.log(poly.getName())
+console.log(poly.getEmail())
+
+console.log(poly.getName())
+const firstStudent = new Student('js', true)
+firstStudent.addHwResult('HTML', true)
+console.log(firstStudent.getHwResults())
+
+  // [
+  // name: 'Mango',
+  // email: 'mango@mail.com',
+  // hwResults: [
+  //   {
+  //     topic: 'HTML',
+  //     success: true,
+  //   },
+  //   {
+  //     topic: 'CSS',
+  //     success: true,
+  //   },
+  //   {
+  //     topic: 'JavaScript',
+  //     success: false,
+  //   },
+  // ],
+
+// ----------- ЗАДАЧА № 3 ПРАКТИКА ЗА 31.01.2022
 
 
+
+const listOfStudents = [
+	{
+		name: 'John',
+		email: 'john@gmail.com',
+	},
+	{
+		name: 'Jane',
+		email: 'jane@gmail.com',
+	},
+	{
+		name: 'Jack',
+		email: 'jack@gmail.com',
+	},
+	{
+		name: 'Mary',
+		email: 'mary@gmail.com',
+	},
+	{
+		name: 'Robert',
+		email: 'robert@gmail.com',
+	},
+	{
+		name: 'Ann',
+		email: 'ann@gmail.com',
+	},
+	{
+		name: 'Brad',
+		email: 'brad@gmail.com',
+	},
+	{
+		name: 'Lisa',
+		email: 'lisa@gmail.com',
+	},
+	{
+		name: 'Matthew',
+		email: 'matthew@gmail.com',
+	},
+	{
+		name: 'Sandra',
+		email: 'sandra@gmail.com',
+	},
+];
+
+// const FrontendSchool = function (students) {
+//   const superStudents = students.map(({ name, email } )=> new Student(name, email));
+//   this.printStudentsList = function () {
+//     superStudents.forEach(student => console.log(`name: ${student.getName()}, email: ${student.getEmail()}`))
+//   }
+// }
+// const shcool = new FrontendSchool(listOfStudents);
+// shcool.printStudentsList()
+
+
+//   const superStudents = listOfStudents.map(({ name, email } )=> new Student(name, email));
+// console.log(superStudents)
+
+
+
+// ----------- ЗАДАЧА № 4 ПРАКТИКА ЗА 31.01.2022
+class FrontendSchool {
+  #students;
+  constructor(arr) {
+    this.#students = arr.map(({ name, email }) => new Student(name, email));
+  }
+  showStudents() {
+    this.#students.forEach(student =>
+      console.log(`name: ${student.getName()}, email: ${student.getEmail()}`),
+    );
+  }
+}
+const school = new FrontendSchool(listOfStudents);
+school.showStudents();
+console.log(school)
 
 
 
